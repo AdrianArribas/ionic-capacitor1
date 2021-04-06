@@ -1,0 +1,3 @@
+############## CONSOLA ##############################################
+ionic g + enter : muestra una lista de opciones, con ctrl + C cancelamos el menu
+--dry-run : amaga la creacion del elemento para ver como quedaria 
