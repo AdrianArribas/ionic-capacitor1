@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuItem } from './menu-item';
 
 @Component({
   selector: 'app-inicio',
@@ -6,6 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inicio.page.scss'],
 })
 export class InicioPage implements OnInit {
+
+
+  public menuItems: MenuItem[] = [
+    {
+      icon: 'game-controller-outline',
+      name: 'action-sheet',
+      redirectTo: '/action-sheet'
+    },
+    {
+      icon: 'alert-circle-outline',
+      name: 'alert',
+      redirectTo: '/alert'
+    }
+  ];
 
   constructor() { }
 
