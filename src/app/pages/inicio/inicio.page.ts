@@ -8,6 +8,7 @@ import { MenuItem } from './menu-item';
 })
 export class InicioPage implements OnInit {
 
+  public nombreInicio: string;
 
   public menuItems: MenuItem[] = [
     {
@@ -22,7 +23,9 @@ export class InicioPage implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor() {
+    this.nombreInicio = 'Ionic Adri App'
+  }
 
   ngOnInit() {
   }
