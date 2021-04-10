@@ -10,3 +10,5 @@ ionic g + enter : muestra una lista de opciones, con ctrl + C cancelamos el menu
 slot="start" : Posiciona items a la izquierda secuencialmente
 slot="end": Posiciona items a la dcha secuencialmente
 slot="icon-only" : Embellece un icono para que se muestre centrado y grande 
+
+mode="ios" : Hace que un elemento en android se vea como en IOS y viceversa "android"
