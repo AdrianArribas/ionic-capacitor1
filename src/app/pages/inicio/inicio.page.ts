@@ -56,6 +56,31 @@ export class InicioPage implements OnInit {
       name: 'Grid',
       redirectTo: '/grid'
     },
+    {
+      icon: 'film-outline',
+      name: 'Infinite Scroll',
+      redirectTo: '/infscroll'
+    },
+    {
+      icon: 'clipboard-outline',
+      name: 'Ion-Input & Forms',
+      redirectTo: '/input'
+    },
+    {
+      icon: 'list-outline',
+      name: 'Lists - services - sliding',
+      redirectTo: '/list'
+    },
+    {
+      icon: 'list-circle-outline',
+      name: 'ion-reorder',
+      redirectTo: '/reorder'
+    },
+    {
+      icon: 'reload-circle-outline',
+      name: 'Loading',
+      redirectTo: '/loading'
+    },
   ];
 
   constructor() {

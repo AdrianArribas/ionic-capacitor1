@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" color="primary">Volver</ion-back-button>
+    </ion-buttons>
+
+    <ion-title>List Reorder</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="resetOrder()" [color]="toggle? 'primary' : ''">
+        <ion-icon slot="start" name="repeat-outline" [color]="toggle? 'primary' : ''"></ion-icon>
+        Ordenar
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-reorder-group [disabled]="!toggle" (ionItemReorder)="doReorder($event)">
+    <ion-item *ngFor="let item of personajes; let i=index">
+      <ion-label>{{item}}</ion-label>
+      <ion-reorder slot="end">
+        <ion-icon name="repeat-outline"></ion-icon>
+      </ion-reorder>
+    </ion-item>
+  </ion-reorder-group>
+</ion-content>
