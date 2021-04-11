@@ -1,0 +1,48 @@
+<app-header [nombre]="'Date-Time'"></app-header>
+
+<ion-content>
+
+  <ion-list>
+
+    <ion-list-header>
+      <ion-label>Fechas</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Fecha estandar con dato</ion-label>
+      <ion-item>
+        <ion-icon slot="end" color="primary" name="calendar-outline"></ion-icon>
+        <ion-datetime [value]=fecha.toISOString displayFormat="DD MMMM YYYY" (ionChange)="cambioFecha($event)">
+        </ion-datetime>
+      </ion-item>
+    </ion-item>
+
+    <ion-list-header>
+      <ion-label>Restricciones</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Min y Max</ion-label>
+      <ion-item>
+        <ion-icon slot="end" color="primary" name="calendar-outline"></ion-icon>
+        <ion-datetime displayFormat="DD MMMM YYYY" min="2021-01-01" max="2025-12-31"></ion-datetime>
+      </ion-item>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Años</ion-label>
+      <ion-item>
+        <ion-icon slot="end" color="primary" name="calendar-outline"></ion-icon>
+        <ion-datetime displayFormat="YYYY" min="2021" max="2025"></ion-datetime>
+      </ion-item>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Custom Options</ion-label>
+      <ion-item>
+        <ion-icon slot="end" color="primary" name="calendar-outline"></ion-icon>
+        <ion-datetime [pickerOptions]="customPicker" [yearValues]="customYearValues"></ion-datetime>
+      </ion-item>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>
