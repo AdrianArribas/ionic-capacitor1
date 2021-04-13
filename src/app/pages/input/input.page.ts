@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { NgForm, FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-input',
@@ -15,6 +15,8 @@ export class InputPage implements OnInit {
   }
   public pattern = "^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$";
 
+  public form: NgForm;
+
   constructor() { }
 
   ngOnInit() {
@@ -26,6 +28,7 @@ export class InputPage implements OnInit {
   }
 
   public onSubmit(event: NgForm) {
+    this.form = event;
     console.log('info del formulario', event);
     console.log('info de los campos', this.usuario);
   }

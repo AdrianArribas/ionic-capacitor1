@@ -1,5 +1,18 @@
 <ion-header>
   <ion-toolbar>
+    <!--     ##################### MENU FORMA 1 ########################
+  <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline" color="primary"></ion-icon>
+      </ion-button>
+    </ion-buttons> -->
+
+    <!-- ################### MENU FORMA 2 ######################### -->
+
+    <ion-buttons slot="start">
+      <ion-menu-button menu="first" slot="icon-only" name="menu-outline" color="primary"></ion-menu-button>
+    </ion-buttons>
+
     <ion-title>{{nombreInicio}}</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -7,7 +20,7 @@
 <ion-content>
 
   <ion-list>
-    <ion-item *ngFor="let item of menuItems" routerLink="{{item.redirectTo}}" detail>
+    <ion-item *ngFor="let item of menuItems | async" routerLink="{{item.redirectTo}}" detail>
       <ion-icon name="{{item.icon}}" slot="start" color="primary"></ion-icon>
       {{item.name}}
     </ion-item>

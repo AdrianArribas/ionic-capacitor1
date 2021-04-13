@@ -8,14 +8,16 @@ import { ButtonsPageRoutingModule } from './buttons-routing.module';
 
 import { ButtonsPage } from './buttons.page';
 import { HeaderComponent } from 'src/app/components/header/header.component';
+import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ButtonsPageRoutingModule
+    ButtonsPageRoutingModule,
+    ComponentsModule
   ],
-  declarations: [ButtonsPage, HeaderComponent]
+  declarations: [ButtonsPage]
 })
 export class ButtonsPageModule { }

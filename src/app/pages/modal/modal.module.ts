@@ -4,10 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { AvatarPageRoutingModule } from './avatar-routing.module';
+import { ModalPageRoutingModule } from './modal-routing.module';
 
-import { AvatarPage } from './avatar.page';
-import { HeaderComponent } from 'src/app/components/header/header.component';
+import { ModalPage } from './modal.page';
 import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
@@ -15,9 +14,9 @@ import { ComponentsModule } from '../../components/components.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    AvatarPageRoutingModule,
+    ModalPageRoutingModule,
     ComponentsModule
   ],
-  declarations: [AvatarPage]
+  declarations: [ModalPage]
 })
-export class AvatarPageModule { }
+export class ModalPageModule { }

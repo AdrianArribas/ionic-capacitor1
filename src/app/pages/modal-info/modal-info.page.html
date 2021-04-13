@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{modalnomb}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <h3>Datos desde componente padre</h3>
+  <p>{{nombre}}</p>
+  <p>{{estado}}</p>
+
+  <ion-button expand="block" (click)="onClick()">
+    Salir sin argumentos
+  </ion-button>
+  <ion-button expand="block" (click)="onClickdos()">
+    Salir con argumentos
+  </ion-button>
+
+</ion-content>

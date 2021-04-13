@@ -4,10 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { AvatarPageRoutingModule } from './avatar-routing.module';
+import { PopoverPageRoutingModule } from './popover-routing.module';
 
-import { AvatarPage } from './avatar.page';
-import { HeaderComponent } from 'src/app/components/header/header.component';
+import { PopoverPage } from './popover.page';
 import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
@@ -15,9 +14,9 @@ import { ComponentsModule } from '../../components/components.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    AvatarPageRoutingModule,
+    PopoverPageRoutingModule,
     ComponentsModule
   ],
-  declarations: [AvatarPage]
+  declarations: [PopoverPage]
 })
-export class AvatarPageModule { }
+export class PopoverPageModule { }
