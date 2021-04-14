@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { MenuItem } from '../interfaces/interfaces';
+import { Heroe, MenuItem } from '../interfaces/interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -15,5 +15,13 @@ export class DataService {
 
   getMenuOptions() {
     return this.http.get<MenuItem[]>("/assets/data/menu-opts.json");
+  }
+
+  getAlbums() {
+    return this.http.get('https://jsonplaceholder.typicode.com/albums');
+  }
+
+  getHeroes() {
+    return this.http.get<Heroe[]>("/assets/data/superheroes.json");
   }
 }

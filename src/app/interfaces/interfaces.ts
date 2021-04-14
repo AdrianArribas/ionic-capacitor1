@@ -3,3 +3,11 @@ export interface MenuItem {
     name: string;
     redirectTo: string;
 }
+
+export interface Heroe {
+    superhero: string;
+    publisher: string;
+    alter_ego: string;
+    first_appaerance: string;
+    characters: string;
+}

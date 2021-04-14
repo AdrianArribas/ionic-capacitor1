@@ -1,0 +1,15 @@
+<app-header nombre="ion-Refresher"></app-header>
+
+<ion-content>
+  <h3 class="ion-padding">Tira hacia abajo para refrescar!</h3>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)" pullFactor="0.8" pullMin="60" pullMax="120">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list class="animate__animated animate__faster" [ngClass]="{'animate__fadeIn': fade,'animate__fadeOut': !fade}">
+    <ion-item *ngFor="let item of items; let i=index" class="animate__animated animate__backInRight animate__faster">
+      <ion-label>item: {{i+1}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

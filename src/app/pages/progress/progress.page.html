@@ -1,0 +1,58 @@
+<app-header nombre="Progress Bars"></app-header>
+
+<ion-content class="ion-padding">
+
+  <h4>Puedes manejar la barra con el ion-range</h4>
+  <ion-list>
+    <ion-item>
+      <ion-progress-bar type="determinate" [value]="porcentaje" color="danger"></ion-progress-bar>
+
+
+    </ion-item>
+    <ion-item>
+      <ion-range min="0" max="100" (ionChange)="range($event)">
+        <ion-icon size="small" slot="start" name="sunny"></ion-icon>
+        <ion-icon slot="end" name="sunny"></ion-icon>
+      </ion-range>
+    </ion-item>
+  </ion-list>
+
+
+
+
+  <h3> Default Progressbar </h3>
+  <ion-progress-bar></ion-progress-bar>
+
+  <h3> Default Progressbar with 50 percent </h3>
+  <ion-progress-bar value="0.5"></ion-progress-bar>
+
+  <h3> Colorize Progressbar </h3>
+  <ion-progress-bar color="success" value="0.5"></ion-progress-bar>
+  <ion-progress-bar color="danger" value="0.5"></ion-progress-bar>
+
+  <h3> Other types: </h3>
+  <h4> Buffer </h4>
+  <ion-progress-bar value="0.25" buffer="0.5"></ion-progress-bar>
+  <h4> Indeterminado </h4>
+  <ion-progress-bar type="indeterminate"></ion-progress-bar>
+  <h4> Indeterminado reverso </h4>
+  <ion-progress-bar type="indeterminate" reversed="true"></ion-progress-bar>
+
+  <h3> Ion Range: </h3>
+  <ion-list>
+
+    <ion-item>
+      <ion-range min="1000" max="2000" step="100" snaps="true" color="secondary"></ion-range>
+    </ion-item>
+
+    <ion-item>
+      <ion-range min="1000" max="2000" step="100" snaps="true" ticks="false" color="secondary"></ion-range>
+    </ion-item>
+
+    <ion-item>
+      <ion-range dualKnobs="true" min="21" max="72" step="3" snaps="true"></ion-range>
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>

@@ -73,5 +73,40 @@
         "icon": "chatbox-outline",
         "name": "Pop-over",
         "redirectTo": "/popover"
+    },
+    {
+        "icon": "code-working-outline",
+        "name": "Progress bars",
+        "redirectTo": "/progress"
+    },
+    {
+        "icon": "arrow-down-circle-outline",
+        "name": "Refresher",
+        "redirectTo": "/refresher"
+    },
+    {
+        "icon": "search-outline",
+        "name": "Search",
+        "redirectTo": "/search"
+    },
+    {
+        "icon": "copy-outline",
+        "name": "Segments & skelleton",
+        "redirectTo": "/segments"
+    },
+    {
+        "icon": "play-forward-outline",
+        "name": "Slides",
+        "redirectTo": "/slides"
+    },
+    {
+        "icon": "bookmarks-outline",
+        "name": "Tabs",
+        "redirectTo": "/tabs/account"
+    },
+    {
+        "icon": "pricetag-outline",
+        "name": "Toasts",
+        "redirectTo": "/toast"
     }
 ]
