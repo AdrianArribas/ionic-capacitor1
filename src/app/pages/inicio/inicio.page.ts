@@ -13,23 +13,35 @@ import { DataService } from '../../services/data.service';
 export class InicioPage implements OnInit {
 
 
-  public slides: { img: string, titulo: string, desc: string, link?: string }[] = [
+  public slides: { img: string, titulo: string, desc: string, link?: string, linkDesc?: string }[] = [
+
     {
-      img: '/assets/slides/ionic-icon.svg',
-      titulo: 'Muestrario de Ionic',
-      desc: 'Mira y prueba todas las opciones de Ionic Framework'
+      img: '/assets/slides/linkedin-icon.svg',
+      titulo: 'Hecho por Adrian Arribas',
+      desc: 'Sigueme en Linkedin',
+      link: 'https://www.linkedin.com/in/adrianarribashernandez/',
+      linkDesc: 'Linkedin'
     },
     {
       img: '/assets/slides/github-octocat.svg',
       titulo: 'Disponibe en GitHub',
       desc: 'Descarga el código fuente:',
-      link: 'https://github.com/AdrianArribas/ionic-capacitor1'
+      link: 'https://github.com/AdrianArribas/ionic-capacitor1',
+      linkDesc: 'Visita mi Github'
     },
     {
-      img: '/assets/slides/linkedin-icon.svg',
-      titulo: 'Hecho por Adrian Arribas',
-      desc: 'Sigueme en Linkedin'
+      img: '/assets/images/Generacion-Friki-logo.png',
+      titulo: 'Generación Friki',
+      desc: 'Visita mi web de reseñas y eventos:',
+      link: 'https://www.generacionfriki.es/',
+      linkDesc: 'Visita GeneracionFriki'
+    },
+    {
+      img: '/assets/slides/ionic-icon.svg',
+      titulo: 'Muestrario de Ionic',
+      desc: 'Mira y prueba todas las opciones de Ionic Framework'
     }
+
   ];
 
   /*  public slideOpts = {

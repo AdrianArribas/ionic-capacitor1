@@ -35,8 +35,8 @@
         <ion-card-content>
           {{slide.desc}}
 
-          <ion-button class="ion-padding" *ngIf="slide.link" (click)="openUrl(slide.link)" expand="block">
-            Visita mi GitHub
+          <ion-button class="ion-padding" *ngIf="slide.link" [href]="slide.link" expand="block">
+            {{slide.linkDesc}}
           </ion-button>
 
         </ion-card-content>
