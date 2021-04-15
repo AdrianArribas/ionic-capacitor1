@@ -1,7 +1,7 @@
 <ion-app>
 
   <!-- can be "xs", "sm", "md", "lg", or "xl" -->
-  <ion-split-pane when="md" contentId="main">
+  <!--   <ion-split-pane when="md" contentId="main">
 
     <ion-menu side="start" menuId="first" contentId="main">
       <ion-header>
@@ -28,9 +28,13 @@
       </ion-content>
     </ion-menu>
 
-    <ion-router-outlet id="main"></ion-router-outlet>
+    <ion-router-outlet id="main" main></ion-router-outlet>
 
-  </ion-split-pane>
+  </ion-split-pane> -->
+
+  <app-menu menuId="first" contentId="main"></app-menu>
+
+  <ion-router-outlet id="main" main></ion-router-outlet>
 
 
 </ion-app>

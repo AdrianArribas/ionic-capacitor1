@@ -1,0 +1,27 @@
+<ion-menu slot="start" [menuId]="menuId" [contentId]="contentId">
+  <ion-header>
+    <ion-toolbar color="secondary">
+      <ion-title>Adri App</ion-title>
+      <ion-buttons slot="end">
+        <ion-item lines="none" slot="end" color="secondary">
+          <ion-toggle (ionChange)="theme($event)" slot="end"></ion-toggle>
+        </ion-item>
+        <ion-menu-button menu="first" name="chevron-back-outline" autoHide="true">
+
+        </ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+
+      <ion-menu-toggle *ngFor="let item of menuItems | async" autoHide="false">
+        <ion-item routerLink="{{item.redirectTo}}" detail>
+          <ion-icon name="{{item.icon}}" slot="start" color="primary"></ion-icon>
+          {{item.name}}
+        </ion-item>
+      </ion-menu-toggle>
+
+    </ion-list>
+  </ion-content>
+</ion-menu>

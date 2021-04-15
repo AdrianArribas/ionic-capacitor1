@@ -11,6 +11,9 @@
 
     <ion-buttons slot="start">
       <ion-menu-button menu="first" slot="icon-only" name="menu-outline" color="primary"></ion-menu-button>
+      <!-- <ion-item lines="none" slot="end">
+        <ion-toggle (ionChange)="theme($event)" slot="end"></ion-toggle>
+      </ion-item> -->
     </ion-buttons>
 
     <ion-title>{{nombreInicio}}</ion-title>
@@ -19,12 +22,40 @@
 
 <ion-content>
 
-  <ion-list>
+
+
+  <ion-slides mode="ios" pager="ios" scrollbar="ios" [options]="slideOpts" class="slide-full">
+    <ion-slide *ngFor="let slide of slides" class="slideCustom">
+      <ion-card mode="ios">
+        <ion-img [src]="slide.img" class="slide-image"></ion-img>
+        <ion-card-header>
+          <ion-card-subtitle>{{slide.titulo}}</ion-card-subtitle>
+
+        </ion-card-header>
+        <ion-card-content>
+          {{slide.desc}}
+
+          <ion-button class="ion-padding" *ngIf="slide.link" (click)="openUrl(slide.link)" expand="block">
+            Visita mi GitHub
+          </ion-button>
+
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-menu-button menu="first" slot="icon-only" name="menu-outline" color="primary"> Comencemos!</ion-menu-button>
+    </ion-slide>
+
+  </ion-slides>
+
+
+  <!--  <ion-list>
     <ion-item *ngFor="let item of menuItems | async" routerLink="{{item.redirectTo}}" detail>
       <ion-icon name="{{item.icon}}" slot="start" color="primary"></ion-icon>
       {{item.name}}
     </ion-item>
-  </ion-list>
+  </ion-list> -->
 
   <!--   <ion-button routerLink='/alert'>
     Alert

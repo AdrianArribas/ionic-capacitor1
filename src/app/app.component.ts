@@ -10,7 +10,18 @@ import { DataService } from './services/data.service';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  public menuItems: Observable<MenuItem[]>;
+
+
+  constructor() {
+
+  }
+
+  ngOnInit() {
+
+  }
+
+
+  /* public menuItems: Observable<MenuItem[]>;
 
   constructor(private dataservice: DataService) {
 
@@ -18,7 +29,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.menuItems = this.dataservice.getMenuOptions();
-  }
-
+  } */
 
 }
